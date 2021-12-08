@@ -1,0 +1,43 @@
+introspection: https://weticket-server.herokuapp.com/graphql
+
+servers:
+  - url : https://weticket-server.herokuapp.com/graphql
+
+info:
+    title: WeTicket API
+    description: WeTicket Server API Document입니다.
+    contact:
+        email: dwc05101@kaist.ac.kr
+
+domains:
+  - name: User
+    description: 유저와 관련된 API 목록입니다. 
+    usecases:
+      - name : login
+        description: 로그인
+        query: mutation.login
+      - name : register
+        description: 회원가입
+        query: mutation.register
+  - name: Reservation
+    description: 예약에 관련된 API 목록입니다.
+    usecases:
+      - name : reservations
+        description : 예약목록
+        query: query.reservations
+
+      - name: reservation
+        description : 예약 정보를 반환합니다.
+        query: query.reservation
+
+      - name: preemptSeat
+        description: 좌석을 선점합니다. 선점한 좌석은 5분동안 유효합니다.
+        query: mutation.preemptSeat
+
+      - name: reserveSeat
+        description: 예약을 확정합니다.
+        query: mutation.reserveSeat
+
+      - name : cancelReservation
+        description: 예약을 취소합니다.
+        query: mutation.cancelReservation

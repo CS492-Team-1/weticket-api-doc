@@ -1,0 +1,13 @@
+{
+  "name": "weticket-api-doc",
+  "version": "1.0.0",
+  "description": "D",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "dociql": "^1.1.6"
+  },
+  "scripts": {
+    "generate" : "dociql -d dociql.yml"
+  }
+}
