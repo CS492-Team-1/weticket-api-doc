@@ -1,0 +1,2829 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeTicket API | API Reference</title>
+    <link rel="stylesheet" href="stylesheets/foundation.min.css" />
+    <link rel="stylesheet" href="stylesheets/spectacle.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- <script src="javascripts/foundation.js"></script> -->
+    <script src="javascripts/spectacle.min.js"></script>
+  </head>
+  <body id="spectacle">
+    <div id="page" class="drawer-layout drawer-slide-right-large">
+      <div id="sidebar">
+        <button class="close-button" aria-label="Close menu" type="button" data-drawer-close>
+          <span aria-hidden="true">×</span>
+        </button>
+        <nav id="nav" role="navigation">
+          <h5>Topics</h5>
+          <a href="#introduction">Introduction</a>
+          <h5>Operations</h5>
+          <section>
+            <a href="#tag-User">User</a>
+            <ul>
+              <li>
+                <a href="#operation-login-post"> login </a>
+              </li>
+              <li>
+                <a href="#operation-register-post"> register </a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <a href="#tag-Reservation">Reservation</a>
+            <ul>
+              <li>
+                <a href="#operation-reservations-post"> reservations </a>
+              </li>
+              <li>
+                <a href="#operation-reservation-post"> reservation </a>
+              </li>
+              <li>
+                <a href="#operation-preemptseat-post"> preemptSeat </a>
+              </li>
+              <li>
+                <a href="#operation-reserveseat-post"> reserveSeat </a>
+              </li>
+              <li>
+                <a href="#operation-cancelreservation-post"> cancelReservation </a>
+              </li>
+            </ul>
+          </section>
+          <h5>Schema Definitions</h5>
+          <a href="#definition-Boolean"> Boolean </a>
+          <a href="#definition-CancelReservationInput"> CancelReservationInput </a>
+          <a href="#definition-CancelReservationOutput"> CancelReservationOutput </a>
+          <a href="#definition-DateTime"> DateTime </a>
+          <a href="#definition-LoginInput"> LoginInput </a>
+          <a href="#definition-LoginOutput"> LoginOutput </a>
+          <a href="#definition-PreemptSeatInput"> PreemptSeatInput </a>
+          <a href="#definition-PreemptSeatOutput"> PreemptSeatOutput </a>
+          <a href="#definition-RegisterInput"> RegisterInput </a>
+          <a href="#definition-RegisterOutput"> RegisterOutput </a>
+          <a href="#definition-Reservation"> Reservation </a>
+          <a href="#definition-ReservationInput"> ReservationInput </a>
+          <a href="#definition-ReservationOutput"> ReservationOutput </a>
+          <a href="#definition-ReservationStatus"> ReservationStatus </a>
+          <a href="#definition-ReservationsInput"> ReservationsInput </a>
+          <a href="#definition-ReservationsOutput"> ReservationsOutput </a>
+          <a href="#definition-ReserveSeatInput"> ReserveSeatInput </a>
+          <a href="#definition-ReserveSeatOutput"> ReserveSeatOutput </a>
+          <a href="#definition-String"> String </a>
+          <a href="#definition-Subscription"> Subscription </a>
+          <a href="#definition-User"> User </a>
+        </nav>
+      </div>
+      <div id="docs" class="row collapse expanded drawer" data-drawer>
+        <button class="floating-menu-icon" type="button" data-drawer-slide="right">
+          <span class="hamburger"></span>
+        </button>
+        <div class="example-box doc-content"></div>
+        <article>
+          <h1 class="doc-title">WeTicket API
+            <span>API Reference</span>
+          </h1>
+          <div id="introduction" data-traverse-target="introduction">
+            <div class="doc-row">
+              <div class="doc-copy">
+                <p>WeTicket Server API Document입니다.</p>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>API Endpoints</h5>
+                  <!-- <div class="hljs"> --><pre><code>Endpoint::
+https://weticket-server.herokuapp.com/graphql
+</code></pre>
+                  <!-- </div> -->
+                  <h5>Contact:
+                    <a href="mailto:dwc05101@kaist.ac.kr">dwc05101@kaist.ac.kr</a>
+                  </h5>
+                </section>
+              </div>
+            </div>
+          </div>
+          <h1 id="tag-User" class="swagger-summary-tag" data-traverse-target="tag-User">User</h1>
+          <div class="tag-description doc-row">
+            <div class="doc-copy">
+              <p>유저와 관련된 API 목록입니다.</p>
+            </div>
+          </div>
+          <div id="operation-login-post" class="operation panel" data-traverse-target="operation-login-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-User">User</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">login</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>로그인</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">input:
+                        <span class="prop-type">
+                          <div class="json-property-type">
+                            <div class="">
+                              <a class="json-schema-ref" href="#/definitions/LoginInput">LoginInput</a>
+                            </div>
+                          </div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">mutation</span> login<span class="hljs-tag">(<span class="hljs-code">$input</span>:<span class="hljs-type"> LoginInput!</span>)</span><span class="hljs-tag">{
+  <span class="hljs-symbol">login<span class="hljs-tag">(input: <span class="hljs-code">$input</span>)</span><span class="hljs-tag">{
+    <span class="hljs-symbol">ok</span>
+    <span class="hljs-symbol">error</span>
+    <span class="hljs-symbol">accessToken</span>
+  }</span></span>
+}</span></span>
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;input&quot;</span>: {
+    <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  }
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://weticket-server.herokuapp.com/graphql?query=mutation%20login(%24input%3A%20LoginInput!)%7B%0A%20%20login(input%3A%20%24input)%7B%0A%20%20%20%20ok%0A%20%20%20%20error%0A%20%20%20%20accessToken%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/LoginOutput">LoginOutput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;login&quot;</span>: {
+      <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+      <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;accessToken&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="operation-register-post" class="operation panel" data-traverse-target="operation-register-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-User">User</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">register</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>회원가입</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">input:
+                        <span class="prop-type">
+                          <div class="json-property-type">
+                            <div class="">
+                              <a class="json-schema-ref" href="#/definitions/RegisterInput">RegisterInput</a>
+                            </div>
+                          </div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">mutation</span> register<span class="hljs-tag">(<span class="hljs-code">$input</span>:<span class="hljs-type"> RegisterInput!</span>)</span><span class="hljs-tag">{
+  <span class="hljs-symbol">register<span class="hljs-tag">(input: <span class="hljs-code">$input</span>)</span><span class="hljs-tag">{
+    <span class="hljs-symbol">ok</span>
+    <span class="hljs-symbol">error</span>
+  }</span></span>
+}</span></span>
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;input&quot;</span>: {
+    <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  }
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://weticket-server.herokuapp.com/graphql?query=mutation%20register(%24input%3A%20RegisterInput!)%7B%0A%20%20register(input%3A%20%24input)%7B%0A%20%20%20%20ok%0A%20%20%20%20error%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/RegisterOutput">RegisterOutput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;register&quot;</span>: {
+      <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+      <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <h1 id="tag-Reservation" class="swagger-summary-tag" data-traverse-target="tag-Reservation">Reservation</h1>
+          <div class="tag-description doc-row">
+            <div class="doc-copy">
+              <p>예약에 관련된 API 목록입니다.</p>
+            </div>
+          </div>
+          <div id="operation-reservations-post" class="operation panel" data-traverse-target="operation-reservations-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Reservation">Reservation</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">reservations</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>예약목록</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">input:
+                        <span class="prop-type">
+                          <div class="json-property-type">
+                            <div class="">
+                              <a class="json-schema-ref" href="#/definitions/ReservationsInput">ReservationsInput</a>
+                            </div>
+                          </div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> reservations<span class="hljs-tag">(<span class="hljs-code">$input</span>:<span class="hljs-type"> ReservationsInput!</span>)</span><span class="hljs-tag">{
+  <span class="hljs-symbol">reservations<span class="hljs-tag">(input: <span class="hljs-code">$input</span>)</span><span class="hljs-tag">{
+    <span class="hljs-symbol">ok</span>
+    <span class="hljs-symbol">error</span>
+    <span class="hljs-symbol">reservations<span class="hljs-tag">{
+      <span class="hljs-symbol">id</span>
+      <span class="hljs-symbol">time</span>
+      <span class="hljs-symbol">seats</span>
+      <span class="hljs-symbol">status</span>
+      <span class="hljs-symbol">preemptedAt</span>
+    }</span></span>
+  }</span></span>
+}</span></span>
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;input&quot;</span>: {
+    <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+  }
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://weticket-server.herokuapp.com/graphql?query=query%20reservations(%24input%3A%20ReservationsInput!)%7B%0A%20%20reservations(input%3A%20%24input)%7B%0A%20%20%20%20ok%0A%20%20%20%20error%0A%20%20%20%20reservations%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20time%0A%20%20%20%20%20%20seats%0A%20%20%20%20%20%20status%0A%20%20%20%20%20%20preemptedAt%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ReservationsOutput">ReservationsOutput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;reservations&quot;</span>: {
+      <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+      <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="operation-reservation-post" class="operation panel" data-traverse-target="operation-reservation-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Reservation">Reservation</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">reservation</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>예약 정보를 반환합니다.</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">input:
+                        <span class="prop-type">
+                          <div class="json-property-type">
+                            <div class="">
+                              <a class="json-schema-ref" href="#/definitions/ReservationInput">ReservationInput</a>
+                            </div>
+                          </div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> reservation<span class="hljs-tag">(<span class="hljs-code">$input</span>:<span class="hljs-type"> ReservationInput!</span>)</span><span class="hljs-tag">{
+  <span class="hljs-symbol">reservation<span class="hljs-tag">(input: <span class="hljs-code">$input</span>)</span><span class="hljs-tag">{
+    <span class="hljs-symbol">ok</span>
+    <span class="hljs-symbol">error</span>
+    <span class="hljs-symbol">reservation<span class="hljs-tag">{
+      <span class="hljs-symbol">id</span>
+      <span class="hljs-symbol">time</span>
+      <span class="hljs-symbol">seats</span>
+      <span class="hljs-symbol">status</span>
+      <span class="hljs-symbol">preemptedAt</span>
+    }</span></span>
+  }</span></span>
+}</span></span>
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;input&quot;</span>: {
+    <span class="hljs-attr">&quot;reservationId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  }
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://weticket-server.herokuapp.com/graphql?query=query%20reservation(%24input%3A%20ReservationInput!)%7B%0A%20%20reservation(input%3A%20%24input)%7B%0A%20%20%20%20ok%0A%20%20%20%20error%0A%20%20%20%20reservation%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20time%0A%20%20%20%20%20%20seats%0A%20%20%20%20%20%20status%0A%20%20%20%20%20%20preemptedAt%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ReservationOutput">ReservationOutput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;reservation&quot;</span>: {
+      <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+      <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="operation-preemptseat-post" class="operation panel" data-traverse-target="operation-preemptseat-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Reservation">Reservation</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">preemptSeat</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>좌석을 선점합니다. 선점한 좌석은 5분동안 유효합니다.</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">input:
+                        <span class="prop-type">
+                          <div class="json-property-type">
+                            <div class="">
+                              <a class="json-schema-ref" href="#/definitions/PreemptSeatInput">PreemptSeatInput</a>
+                            </div>
+                          </div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">mutation</span> preemptSeat<span class="hljs-tag">(<span class="hljs-code">$input</span>:<span class="hljs-type"> PreemptSeatInput!</span>)</span><span class="hljs-tag">{
+  <span class="hljs-symbol">preemptSeat<span class="hljs-tag">(input: <span class="hljs-code">$input</span>)</span><span class="hljs-tag">{
+    <span class="hljs-symbol">ok</span>
+    <span class="hljs-symbol">error</span>
+  }</span></span>
+}</span></span>
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;input&quot;</span>: {
+    <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;seats&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ]
+  }
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://weticket-server.herokuapp.com/graphql?query=mutation%20preemptSeat(%24input%3A%20PreemptSeatInput!)%7B%0A%20%20preemptSeat(input%3A%20%24input)%7B%0A%20%20%20%20ok%0A%20%20%20%20error%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/PreemptSeatOutput">PreemptSeatOutput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;preemptSeat&quot;</span>: {
+      <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+      <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="operation-reserveseat-post" class="operation panel" data-traverse-target="operation-reserveseat-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Reservation">Reservation</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">reserveSeat</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>예약을 확정합니다.</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">input:
+                        <span class="prop-type">
+                          <div class="json-property-type">
+                            <div class="">
+                              <a class="json-schema-ref" href="#/definitions/ReserveSeatInput">ReserveSeatInput</a>
+                            </div>
+                          </div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">mutation</span> reserveSeat<span class="hljs-tag">(<span class="hljs-code">$input</span>:<span class="hljs-type"> ReserveSeatInput!</span>)</span><span class="hljs-tag">{
+  <span class="hljs-symbol">reserveSeat<span class="hljs-tag">(input: <span class="hljs-code">$input</span>)</span><span class="hljs-tag">{
+    <span class="hljs-symbol">ok</span>
+    <span class="hljs-symbol">error</span>
+  }</span></span>
+}</span></span>
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;input&quot;</span>: {
+    <span class="hljs-attr">&quot;reservationId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  }
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://weticket-server.herokuapp.com/graphql?query=mutation%20reserveSeat(%24input%3A%20ReserveSeatInput!)%7B%0A%20%20reserveSeat(input%3A%20%24input)%7B%0A%20%20%20%20ok%0A%20%20%20%20error%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ReserveSeatOutput">ReserveSeatOutput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;reserveSeat&quot;</span>: {
+      <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+      <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="operation-cancelreservation-post" class="operation panel" data-traverse-target="operation-cancelreservation-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Reservation">Reservation</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">cancelReservation</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>예약을 취소합니다.</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">input:
+                        <span class="prop-type">
+                          <div class="json-property-type">
+                            <div class="">
+                              <a class="json-schema-ref" href="#/definitions/CancelReservationInput">CancelReservationInput</a>
+                            </div>
+                          </div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">mutation</span> cancelReservation<span class="hljs-tag">(<span class="hljs-code">$input</span>:<span class="hljs-type"> CancelReservationInput!</span>)</span><span class="hljs-tag">{
+  <span class="hljs-symbol">cancelReservation<span class="hljs-tag">(input: <span class="hljs-code">$input</span>)</span><span class="hljs-tag">{
+    <span class="hljs-symbol">ok</span>
+    <span class="hljs-symbol">error</span>
+  }</span></span>
+}</span></span>
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;input&quot;</span>: {
+    <span class="hljs-attr">&quot;reservationId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  }
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://weticket-server.herokuapp.com/graphql?query=mutation%20cancelReservation(%24input%3A%20CancelReservationInput!)%7B%0A%20%20cancelReservation(input%3A%20%24input)%7B%0A%20%20%20%20ok%0A%20%20%20%20error%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/CancelReservationOutput">CancelReservationOutput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;cancelReservation&quot;</span>: {
+      <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+      <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <h1>Schema Definitions</h1>
+          <div id="definition-Boolean" class="definition panel" data-traverse-target="definition-Boolean">
+            <h2 class="panel-title">
+              <a name="/definitions/Boolean"></a>Boolean: boolean
+              <!-- <span class="json-property-type"><div class="json-property-type">boolean</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>The <code>Boolean</code> scalar type represents <code>true</code> or <code>false</code>.</p>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-gql"><span class="hljs-symbol">boolean</span>
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-CancelReservationInput" class="definition panel" data-traverse-target="definition-CancelReservationInput">
+            <h2 class="panel-title">
+              <a name="/definitions/CancelReservationInput"></a>CancelReservationInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>예약 취소에 필요한 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="reservationId" class="has-description">
+                      <span class="json-property-name">reservationId:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>예약 ID</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;reservationId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-CancelReservationOutput" class="definition panel" data-traverse-target="definition-CancelReservationOutput">
+            <h2 class="panel-title">
+              <a name="/definitions/CancelReservationOutput"></a>CancelReservationOutput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>예약 취소 반환 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="ok" class="has-description">
+                      <span class="json-property-name">ok:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-boolean">
+                          <a class="json-schema-ref" href="#/definitions/Boolean">Boolean</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>정상 처리 여부</p>
+                    </dd>
+                    <dt data-property-name="error" class="has-description">
+                      <span class="json-property-name">error:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>에러 메시지</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+  <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-DateTime" class="definition panel" data-traverse-target="definition-DateTime">
+            <h2 class="panel-title">
+              <a name="/definitions/DateTime"></a>DateTime: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.</p>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-gql"><span class="hljs-symbol">object</span>
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-LoginInput" class="definition panel" data-traverse-target="definition-LoginInput">
+            <h2 class="panel-title">
+              <a name="/definitions/LoginInput"></a>LoginInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>로그인에 필요한 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="username" class="has-description">
+                      <span class="json-property-name">username:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>아이디</p>
+                    </dd>
+                    <dt data-property-name="password" class="has-description">
+                      <span class="json-property-name">password:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>비밀번호</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-LoginOutput" class="definition panel" data-traverse-target="definition-LoginOutput">
+            <h2 class="panel-title">
+              <a name="/definitions/LoginOutput"></a>LoginOutput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>로그인 반환 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="ok" class="has-description">
+                      <span class="json-property-name">ok:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-boolean">
+                          <a class="json-schema-ref" href="#/definitions/Boolean">Boolean</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>정상 처리 여부</p>
+                    </dd>
+                    <dt data-property-name="error" class="has-description">
+                      <span class="json-property-name">error:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>에러 메시지</p>
+                    </dd>
+                    <dt data-property-name="accessToken" class="has-description">
+                      <span class="json-property-name">accessToken:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>인증 토큰</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+  <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;accessToken&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-PreemptSeatInput" class="definition panel" data-traverse-target="definition-PreemptSeatInput">
+            <h2 class="panel-title">
+              <a name="/definitions/PreemptSeatInput"></a>PreemptSeatInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>좌석 선점에 필요한 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="time" class="has-description">
+                      <span class="json-property-name">time:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/DateTime">DateTime</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>예약 일시(YYYY-MM-DD HH:mm)</p>
+                    </dd>
+                    <dt data-property-name="seats" class="has-description">
+                      <span class="json-property-name">seats:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>선택한 좌석 목록</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;seats&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ]
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-PreemptSeatOutput" class="definition panel" data-traverse-target="definition-PreemptSeatOutput">
+            <h2 class="panel-title">
+              <a name="/definitions/PreemptSeatOutput"></a>PreemptSeatOutput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>좌석 선점 반환 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="ok" class="has-description">
+                      <span class="json-property-name">ok:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-boolean">
+                          <a class="json-schema-ref" href="#/definitions/Boolean">Boolean</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>정상 처리 여부</p>
+                    </dd>
+                    <dt data-property-name="error" class="has-description">
+                      <span class="json-property-name">error:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>에러 메시지</p>
+                    </dd>
+                    <dt data-property-name="reservation" class="has-description">
+                      <span class="json-property-name">reservation:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/Reservation">Reservation</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>선점된 좌석</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+  <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;reservation&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;seats&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;user&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;reservations&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;seats&quot;</span>: [
+            <span class="hljs-string">&quot;string&quot;</span>
+          ],
+          <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;user&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;reservations&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;seats&quot;</span>: [
+                  <span class="hljs-string">&quot;string&quot;</span>
+                ],
+                <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;user&quot;</span>: {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                    {
+                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                      <span class="hljs-attr">&quot;seats&quot;</span>: [
+                        <span class="hljs-string">&quot;string&quot;</span>
+                      ],
+                      <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                      <span class="hljs-attr">&quot;user&quot;</span>: {
+                        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                          {
+                            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                            <span class="hljs-attr">&quot;seats&quot;</span>: [
+                              <span class="hljs-string">&quot;string&quot;</span>
+                            ],
+                            <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                            <span class="hljs-attr">&quot;user&quot;</span>: {}
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-RegisterInput" class="definition panel" data-traverse-target="definition-RegisterInput">
+            <h2 class="panel-title">
+              <a name="/definitions/RegisterInput"></a>RegisterInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>회원가입에 필요한 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="username" class="has-description">
+                      <span class="json-property-name">username:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>아이디</p>
+                    </dd>
+                    <dt data-property-name="password" class="has-description">
+                      <span class="json-property-name">password:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>비밀번호</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-RegisterOutput" class="definition panel" data-traverse-target="definition-RegisterOutput">
+            <h2 class="panel-title">
+              <a name="/definitions/RegisterOutput"></a>RegisterOutput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>회원가입 반환 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="ok" class="has-description">
+                      <span class="json-property-name">ok:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-boolean">
+                          <a class="json-schema-ref" href="#/definitions/Boolean">Boolean</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>정상 처리 여부</p>
+                    </dd>
+                    <dt data-property-name="error" class="has-description">
+                      <span class="json-property-name">error:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>에러 메시지</p>
+                    </dd>
+                    <dt data-property-name="user" class="has-description">
+                      <span class="json-property-name">user:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/User">User</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>가입된 유저</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+  <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;user&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;reservations&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;seats&quot;</span>: [
+          <span class="hljs-string">&quot;string&quot;</span>
+        ],
+        <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;user&quot;</span>: {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;reservations&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;seats&quot;</span>: [
+                <span class="hljs-string">&quot;string&quot;</span>
+              ],
+              <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;user&quot;</span>: {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;seats&quot;</span>: [
+                      <span class="hljs-string">&quot;string&quot;</span>
+                    ],
+                    <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;user&quot;</span>: {
+                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                        {
+                          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                          <span class="hljs-attr">&quot;seats&quot;</span>: [
+                            <span class="hljs-string">&quot;string&quot;</span>
+                          ],
+                          <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                          <span class="hljs-attr">&quot;user&quot;</span>: {
+                            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                              {
+                                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                                <span class="hljs-attr">&quot;seats&quot;</span>: [
+                                  <span class="hljs-literal">null</span>
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-Reservation" class="definition panel" data-traverse-target="definition-Reservation">
+            <h2 class="panel-title">
+              <a name="/definitions/Reservation"></a>Reservation: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id" class="has-description">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>예약 ID</p>
+                    </dd>
+                    <dt data-property-name="time" class="has-description">
+                      <span class="json-property-name">time:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/DateTime">DateTime</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>예약 일시</p>
+                    </dd>
+                    <dt data-property-name="seats" class="has-description">
+                      <span class="json-property-name">seats:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>좌석 목록</p>
+                    </dd>
+                    <dt data-property-name="status" class="has-description">
+                      <span class="json-property-name">status:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ReservationStatus">ReservationStatus</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>예약 상태</p>
+                    </dd>
+                    <dt data-property-name="preemptedAt" class="has-description">
+                      <span class="json-property-name">preemptedAt:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/DateTime">DateTime</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>선점 시간</p>
+                    </dd>
+                    <dt data-property-name="user" class="has-description">
+                      <span class="json-property-name">user:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/User">User</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>예약유저</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;seats&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;user&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;reservations&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;seats&quot;</span>: [
+          <span class="hljs-string">&quot;string&quot;</span>
+        ],
+        <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;user&quot;</span>: {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;reservations&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;seats&quot;</span>: [
+                <span class="hljs-string">&quot;string&quot;</span>
+              ],
+              <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;user&quot;</span>: {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;seats&quot;</span>: [
+                      <span class="hljs-string">&quot;string&quot;</span>
+                    ],
+                    <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;user&quot;</span>: {
+                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                        {
+                          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                          <span class="hljs-attr">&quot;seats&quot;</span>: [
+                            <span class="hljs-string">&quot;string&quot;</span>
+                          ],
+                          <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                          <span class="hljs-attr">&quot;user&quot;</span>: {
+                            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                              <span class="hljs-literal">null</span>
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-ReservationInput" class="definition panel" data-traverse-target="definition-ReservationInput">
+            <h2 class="panel-title">
+              <a name="/definitions/ReservationInput"></a>ReservationInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>예약 정보를 불러오는데 필요한 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="reservationId" class="has-description">
+                      <span class="json-property-name">reservationId:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>예약 ID</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;reservationId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-ReservationOutput" class="definition panel" data-traverse-target="definition-ReservationOutput">
+            <h2 class="panel-title">
+              <a name="/definitions/ReservationOutput"></a>ReservationOutput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>예약 정보 반환 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="ok" class="has-description">
+                      <span class="json-property-name">ok:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-boolean">
+                          <a class="json-schema-ref" href="#/definitions/Boolean">Boolean</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>정상 처리 여부</p>
+                    </dd>
+                    <dt data-property-name="error" class="has-description">
+                      <span class="json-property-name">error:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>에러 메시지</p>
+                    </dd>
+                    <dt data-property-name="reservation" class="has-description">
+                      <span class="json-property-name">reservation:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/Reservation">Reservation</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>예약 정보</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+  <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;reservation&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;seats&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;user&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;reservations&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;seats&quot;</span>: [
+            <span class="hljs-string">&quot;string&quot;</span>
+          ],
+          <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;user&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;reservations&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;seats&quot;</span>: [
+                  <span class="hljs-string">&quot;string&quot;</span>
+                ],
+                <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;user&quot;</span>: {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                    {
+                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                      <span class="hljs-attr">&quot;seats&quot;</span>: [
+                        <span class="hljs-string">&quot;string&quot;</span>
+                      ],
+                      <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                      <span class="hljs-attr">&quot;user&quot;</span>: {
+                        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                          {
+                            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                            <span class="hljs-attr">&quot;seats&quot;</span>: [
+                              <span class="hljs-string">&quot;string&quot;</span>
+                            ],
+                            <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                            <span class="hljs-attr">&quot;user&quot;</span>: {}
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-ReservationStatus" class="definition panel" data-traverse-target="definition-ReservationStatus">
+            <h2 class="panel-title">
+              <a name="/definitions/ReservationStatus"></a>ReservationStatus: string
+              <!-- <span class="json-property-type"><div class="json-property-type"></div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-anyOf">
+                  <dl>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">PREEMPTED</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">RESERVED</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                  </dl>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-ReservationsInput" class="definition panel" data-traverse-target="definition-ReservationsInput">
+            <h2 class="panel-title">
+              <a name="/definitions/ReservationsInput"></a>ReservationsInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>예약 목록을 불러오는데 필요한 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="time" class="has-description">
+                      <span class="json-property-name">time:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/DateTime">DateTime</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>일시(YYYY-MM-DD HH:mm)</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-ReservationsOutput" class="definition panel" data-traverse-target="definition-ReservationsOutput">
+            <h2 class="panel-title">
+              <a name="/definitions/ReservationsOutput"></a>ReservationsOutput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>예약 목록 반환 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="ok" class="has-description">
+                      <span class="json-property-name">ok:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-boolean">
+                          <a class="json-schema-ref" href="#/definitions/Boolean">Boolean</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>정상 처리 여부</p>
+                    </dd>
+                    <dt data-property-name="error" class="has-description">
+                      <span class="json-property-name">error:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>에러 메시지</p>
+                    </dd>
+                    <dt data-property-name="reservations" class="has-description">
+                      <span class="json-property-name">reservations:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/Reservation">Reservation</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>예약 목록</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+  <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;reservations&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;seats&quot;</span>: [
+        <span class="hljs-string">&quot;string&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;user&quot;</span>: {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;reservations&quot;</span>: [
+          {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;seats&quot;</span>: [
+              <span class="hljs-string">&quot;string&quot;</span>
+            ],
+            <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;user&quot;</span>: {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;seats&quot;</span>: [
+                    <span class="hljs-string">&quot;string&quot;</span>
+                  ],
+                  <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;user&quot;</span>: {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                      {
+                        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                        <span class="hljs-attr">&quot;seats&quot;</span>: [
+                          <span class="hljs-string">&quot;string&quot;</span>
+                        ],
+                        <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                        <span class="hljs-attr">&quot;user&quot;</span>: {
+                          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                            {
+                              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                              <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                              <span class="hljs-attr">&quot;seats&quot;</span>: [
+                                <span class="hljs-string">&quot;string&quot;</span>
+                              ],
+                              <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                              <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-ReserveSeatInput" class="definition panel" data-traverse-target="definition-ReserveSeatInput">
+            <h2 class="panel-title">
+              <a name="/definitions/ReserveSeatInput"></a>ReserveSeatInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>예약 확정에 필요한 데이터</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="reservationId" class="has-description">
+                      <span class="json-property-name">reservationId:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>예약 ID</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;reservationId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-ReserveSeatOutput" class="definition panel" data-traverse-target="definition-ReserveSeatOutput">
+            <h2 class="panel-title">
+              <a name="/definitions/ReserveSeatOutput"></a>ReserveSeatOutput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>예약 확정 반환값</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="ok" class="has-description">
+                      <span class="json-property-name">ok:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-boolean">
+                          <a class="json-schema-ref" href="#/definitions/Boolean">Boolean</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>정상 처리 여부</p>
+                    </dd>
+                    <dt data-property-name="error" class="has-description">
+                      <span class="json-property-name">error:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>에러 메시지</p>
+                    </dd>
+                    <dt data-property-name="reservation" class="has-description">
+                      <span class="json-property-name">reservation:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/Reservation">Reservation</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>확정된 예약</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;ok&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+  <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;reservation&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;seats&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;user&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;reservations&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;seats&quot;</span>: [
+            <span class="hljs-string">&quot;string&quot;</span>
+          ],
+          <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;user&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;reservations&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;seats&quot;</span>: [
+                  <span class="hljs-string">&quot;string&quot;</span>
+                ],
+                <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;user&quot;</span>: {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                    {
+                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                      <span class="hljs-attr">&quot;seats&quot;</span>: [
+                        <span class="hljs-string">&quot;string&quot;</span>
+                      ],
+                      <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                      <span class="hljs-attr">&quot;user&quot;</span>: {
+                        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                          {
+                            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                            <span class="hljs-attr">&quot;seats&quot;</span>: [
+                              <span class="hljs-string">&quot;string&quot;</span>
+                            ],
+                            <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                            <span class="hljs-attr">&quot;user&quot;</span>: {}
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-String" class="definition panel" data-traverse-target="definition-String">
+            <h2 class="panel-title">
+              <a name="/definitions/String"></a>String: string
+              <!-- <span class="json-property-type"><div class="json-property-type">string</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>The <code>String</code> scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.</p>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-Subscription" class="definition panel" data-traverse-target="definition-Subscription">
+            <h2 class="panel-title">
+              <a name="/definitions/Subscription"></a>Subscription: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="newReservationOnTime">
+                      <span class="json-property-name">newReservationOnTime:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/Reservation">Reservation</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="canceledReservationOnTime">
+                      <span class="json-property-name">canceledReservationOnTime:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/Reservation">Reservation</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;newReservationOnTime&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;seats&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;user&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;reservations&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;seats&quot;</span>: [
+            <span class="hljs-string">&quot;string&quot;</span>
+          ],
+          <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;user&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;reservations&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;seats&quot;</span>: [
+                  <span class="hljs-string">&quot;string&quot;</span>
+                ],
+                <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;user&quot;</span>: {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                    {
+                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                      <span class="hljs-attr">&quot;seats&quot;</span>: [
+                        <span class="hljs-string">&quot;string&quot;</span>
+                      ],
+                      <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                      <span class="hljs-attr">&quot;user&quot;</span>: {
+                        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                          {
+                            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                            <span class="hljs-attr">&quot;seats&quot;</span>: [
+                              <span class="hljs-string">&quot;string&quot;</span>
+                            ],
+                            <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                            <span class="hljs-attr">&quot;user&quot;</span>: {
+                              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                              <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-User" class="definition panel" data-traverse-target="definition-User">
+            <h2 class="panel-title">
+              <a name="/definitions/User"></a>User: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id" class="has-description">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>유저 데이터베이스 ID</p>
+                    </dd>
+                    <dt data-property-name="username" class="has-description">
+                      <span class="json-property-name">username:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>유저 로그인 아이디</p>
+                    </dd>
+                    <dt data-property-name="reservations" class="has-description">
+                      <span class="json-property-name">reservations:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/Reservation">Reservation</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>예약 목록</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;reservations&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;seats&quot;</span>: [
+        <span class="hljs-string">&quot;string&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;user&quot;</span>: {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;reservations&quot;</span>: [
+          {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;seats&quot;</span>: [
+              <span class="hljs-string">&quot;string&quot;</span>
+            ],
+            <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;user&quot;</span>: {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;seats&quot;</span>: [
+                    <span class="hljs-string">&quot;string&quot;</span>
+                  ],
+                  <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;user&quot;</span>: {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                      {
+                        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                        <span class="hljs-attr">&quot;seats&quot;</span>: [
+                          <span class="hljs-string">&quot;string&quot;</span>
+                        ],
+                        <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                        <span class="hljs-attr">&quot;user&quot;</span>: {
+                          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;reservations&quot;</span>: [
+                            {
+                              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                              <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                              <span class="hljs-attr">&quot;seats&quot;</span>: [
+                                <span class="hljs-string">&quot;string&quot;</span>
+                              ],
+                              <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                              <span class="hljs-attr">&quot;preemptedAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="doc-row no-margin">
+            <div class="doc-copy doc-separator">
+              <a class="powered-by" href="https://github.com/wayfair/dociql">Documentation by
+                <span>DociQL</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
